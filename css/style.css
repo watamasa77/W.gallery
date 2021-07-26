@@ -1,0 +1,18 @@
+.main-item{
+  overflow: hidden;
+  margin: 0 auto;
+  width: 960px;
+}
+
+.product-text{
+  float: left;
+  width: 25%;
+  background-color: #fff;
+}
+
+.main-photo{
+  float: right;
+  width: 75%;
+  background-color: #fff;
+}
+
