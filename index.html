@@ -7,24 +7,32 @@
   <title>E.</title>
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/pure-drawer-new.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header id="header">
+  <header class="header">
     <div class="h-container">
       <nav class="header-nav">
-        <ul>
+        <button type="button" class="js-button-hamburger button-hamburger" aria-controls="global-nav"
+          aria-expanded="false">
+          <span class="hamburger">
+            <span class="screen-reader-text">メニューを開閉する</span>
+          </span>
+        </button>
+        <ul class="global-nav">
           <li>
-            <a href="#">Top</a>
+            <a href="index.html">TOP</a>
           </li>
           <li>
-            <a href="#">art direction</a>
+            <a href="art-direction.html">ART DIRECTION</a>
           </li>
           <li>
-            <a href="#">interior designer</a>
+            <a href="#">INTERIOR DESIGN</a>
           </li>
           <li>
-            <a href="#">空間design</a>
+            <a href="#">空間DESIGN</a>
           </li>
         </ul>
       </nav>
@@ -43,27 +51,27 @@
       <div class="main-container">
         <div class="occupation_location">
           <p class="occupation">
-            空間デザイナー
+            FEATURES
           </p>
         </div>
         <div class="main-item-container">
           <div class="main-item">
             <p class=product-text>
-              テキストテキストテキスト
+              Candle Stand
               <br>
-              <span>テキストテキストテキスト</span>
+              <span>Peter Zumthor</span>
             </p>
             <div class="main-photo">
               <a href="#">
-                <img src="images/E.01.png" alt="photo1" width="100%">
+                <img src="images/e.sarada-1.jpg" alt="photo1" width="100%">
               </a>
             </div>
           </div>
           <div class="main-item">
             <p class=product-text>
-              テキストテキストテキスト
+              ジョージ・ナカシマ没後30年企画展
               <br>
-              <span>テキストテキストテキスト</span>
+              <span>Glass chair limited edition</span>
             </p>
             <div class="main-photo">
               <a href="#">
@@ -73,9 +81,9 @@
           </div>
           <div class="main-item">
             <p class=product-text>
-              テキストテキストテキスト
+              NEW DRAWING POSTER
               <br>
-              <span>テキストテキストテキスト</span>
+              <span>Ronan Bouroullec</span>
             </p>
             <div class="main-photo">
               <a href="#">
@@ -85,13 +93,39 @@
           </div>
           <div class="main-item">
             <p class=product-text>
-              テキストテキストテキスト
+              A MAGAZINE
               <br>
-              <span>テキストテキストテキスト</span>
+              URATED BY MAISON MARTIN MARGIELA - LIMITED
+              <br>
+              EDITION REPRINT,2021
             </p>
             <div class="main-photo">
               <a href="#">
                 <img src="images/E.04.png" alt="photo4" width="100%">
+              </a>
+            </div>
+          </div>
+          <div class="main-item">
+            <p class=product-text>
+              ALUMI TABLE
+              <br>
+              <span>Max Lamb</span>
+            </p>
+            <div class="main-photo">
+              <a href="#">
+                <img src="images/E.05.png" alt="photo5" width="100%">
+              </a>
+            </div>
+          </div>
+          <div class="main-item">
+            <p class=product-text>
+              DAPHINE LAMP
+              <br>
+              <span>Tommaso Cimini</span>
+            </p>
+            <div class="main-photo">
+              <a href="#">
+                <img src="images/E.06.png" alt="photo6" width="100%">
               </a>
             </div>
           </div>
@@ -101,14 +135,14 @@
   </main>
   <!-- ・/.main -->
 
-  <footer id="footer">
+  <footer class="footer">
     <div class="gallery-information">
       <div class="footer-left">
         <p class="title">
           <a href="index.html">E.</a>
         </p>
       </div>
-      <div class="footer-right">
+      <div class="footer-left">
         <ul class="footer-nav">
           <li>
             <a href="#">ABOUT</a>
@@ -124,5 +158,8 @@
       </div>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="js/common.js"></script>
 </body>
 </html>
