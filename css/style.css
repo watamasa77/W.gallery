@@ -5,33 +5,50 @@
 	padding:0;
 	border:0;
 }
-
+/* "Sorts Mill Goudy", */
 /** body **/
 body {
 	/* -webkit-text-size-adjust: 100%; */
 	/* -webkit-font-smoothing: antialiased !important; */
 	font-size:13px;
-	font-family:"Sorts Mill Goudy", "AdobeGaramondW01-Regula","ヒラギノ明朝 ProN W3","HiraMinProN-W3","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
-  font-style: italic;
+/* font-family: EB Garamond; */
+	/* font-family: 'Amiri',serif; */
+  font-family: 'Robot',sans-serif;
+  /* "AdobeGaramondW01-Regula","ヒラギノ明朝 ProN W3","HiraMinProN-W3","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif; */
+  /* font-style: italic; */
 	letter-spacing:0.03em;
 	line-height:1.8;
-	color: #000;
-	background-color:#FFFFFF;
+	color: #fff;
 	height: 100%;
 	min-height:500px; 
 	margin: 0;
 	padding: 0px;
 	width:100%;
+  background-color: #000;
+}
+
+.w-body {
+  background-color: #fff;
 }
 
 .h-container{
   position: fixed;
   display: block;
   width: 100%;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 2em 0;
+  /* border-bottom: 1px solid #e0e0e0; */
+  background-color: #000;
+}
+
+.w-header {
   position: fixed;
   top: 0;
   right: 0;
@@ -48,20 +65,22 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 3em;
+  padding: 5em;
   width: 100%;
   height: 120%;
   background-color: #263238;
-  list-style: none;
+  opacity: 0.96;
   transition: transform .3s ease-in-out;
   -webkit-transform: translateX(100%);
      -ms-transform:translateX(100%);
      transform: translateX(100%);
+  z-index: 5;
 }
 
 
 .global-nav li {
-  text-decoration: underline solid #90a4ae;
+  border-bottom: solid 0.5px #90a4ae;
+  list-style: none;
 }
 
 .global-nav li a {
@@ -82,6 +101,18 @@ body {
     -ms-transform: translateX(0);
     transform: translateX(0);
 }
+.nav-footer {
+  margin-top: 2em;
+  
+}
+
+.nav-footer li {
+  float: left;
+  font-size: 0.75em;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+}
 
 /* Button */
 .button-hamburger {
@@ -89,7 +120,7 @@ body {
   top: 0.8em;
   left: 4%;
   bottom: 0;
-  z-index: 1;
+  z-index: 10;
   width: 32px;
   height: 32px;
   margin: auto 0;
@@ -113,7 +144,23 @@ body {
   height: 2px;
   margin: auto;
   border-radius: 4px;
-  background-color: #263238;
+  /* background-color: #263238; */
+  background-color:#fff;
+}
+
+.w-hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 32px;
+  height: 2px;
+  margin: auto;
+  border-radius: 4px;
+  /* background-color: #263238; */
+  background-color:#000;
 }
 
 .hamburger:before,
@@ -128,7 +175,24 @@ body {
   transition: transform .2s ease-in-out;
 }
 
+.w-hamburger:before,
+.w-hamburger:after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background-color: inherit;
+  content: '';
+  transition: transform .2s ease-in-out;
+}
+
+
 .is-active-drawer .hamburger {
+  background-color: transparent;
+}
+
+.is-active-drawer .w-hamburger {
   background-color: transparent;
 }
 
@@ -138,7 +202,19 @@ body {
   background-color: #90a4ae; 
 }
 
+.is-active-drawer .w-hamburger:before,
+.is-active-drawer .w-hamburger:after {
+  top: 0;
+  background-color: #90a4ae; 
+}
+
 .is-active-drawer .hamburger:before {
+  -webkit-transform :rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+}
+
+.is-active-drawer .w-hamburger:before {
   -webkit-transform :rotate(-45deg);
     -ms-transform: rotate(-45deg);
       transform: rotate(-45deg);
@@ -150,7 +226,17 @@ body {
       transform: rotate(45deg);
 }
 
+.is-active-drawer .w-hamburger:after {
+  -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+}
+
 .hamburger:before {
+  top: -9px;
+}
+
+.w-hamburger:before {
   top: -9px;
 }
 
@@ -158,45 +244,136 @@ body {
   top: 9px;
 }
 
+.w-hamburger:after {
+  top: 9px;
+}
+
+/* .logo-container {
+  background-color: #fff;
+} */
+
+
 .logo {
+  /* padding-top: 2.5em;
+  margin-left: -0.1em;
+  margin-bottom: 0.85em; */
+  padding-top: 12%;
+  padding-left: -1%;
+}
+
+.w-logo {
+  background-color: #fff;
   padding-top: 2.5em;
-  margin-left: 0.65em;
+  margin-left: 0.5em;
   margin-bottom: 0.85em;
 }
 
+/* .w-logo-container {
+  background-color: #fff;
+} */
 
 
-.occupation {
-  font-size: 1.2em;
+/* MAIN */
+.w-main-container {
+  background-color: #fff;
+}
+
+.w-main-item-container{
+width: 95%;
+margin: 0 auto;
+background-color: #fff;
+}
+/* .occupation {
+  font-size: 1em; 
+  1.2emから変更
+  color: #fff;
   font-style: italic;
   line-height: 1.8;
   letter-spacing: 0.03em;
-  /* background-color: red; */
+  background-color: #000;
   padding-left: 1em;
+} */
+
+.w-occupation_location {
+  margin-bottom: 7em;
+  background-color:#fff;
+}
+
+.w-occupation {
+  color: #000;
+  margin-left: 1em;
 }
 
 .main-item-container {
   margin-top: 2.5em;
+  margin-bottom: 5em;
+  z-index: 1;
+}
+
+.item-container {
+  margin-top: 10em;
+  margin-bottom: 10em;
 }
 
 .main-item{
-    margin: 0 auto 100px;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    z-index: -1;
+    /* padding-bottom: 10em; */
+    /* background-color:#000; */
+}
+.w-main-item {
+    margin: 0 auto 20px;
+    width: 100%;
+    border-bottom: solid 1px #90a4ae;
+    background-color:#fff;
+}
+
+.product-text{
+    position: absolute;
+    font-size: 1.7em;
+    /* font-style: italic; */
+    line-height: 1.2;
+    text-align: left;
+    /* background-color:#000; */
+    padding-left: 1em;
+    margin-bottom: 2.5em;
+    top: 50%;
+    left: 25%;
+    z-index: 5;
+}
+
+.w-product-text {
+    font-size: 1.2em;
+    color: #000;
+    line-height: 1.2;
+    text-align: center;
+    /* margin-bottom: 2.5em; */
+    padding: 1.5em 0 5em 0;
+    background-color:#fff;
+}
+
+.main-photo {
+    position: relative;
+    margin: 0 auto ;
+    background-color:#000;
+    z-index: 1;
+}
+
+.w-main-photo {
+  margin: 0 auto ;
+  background-color:#fff;
+}
+
+ .photo {
+   text-align: center;
+  }
+
+  .photo img {
     width: 100%;
   }
 
-  .product-text{
-    font-size: 1.2em;
-    font-style: italic;
-    line-height: 1.2;
-    text-align: left;
-    /* background-color: blue; */
-    padding-left: 1em;
-    margin-bottom: 2.5em;
-  }
-
-  .main-photo {
-    margin: 0 auto ;
-  }
 
   span {
     font-size: 0.75em;
@@ -204,12 +381,22 @@ body {
     color: #666;
   }
 
-
-
-
 .img {
   max-width: 100%;  /*  幅の最大値を親要素の幅に合わせる */
   height: auto; /*  縦横比を維持する */
+}
+
+.pagenation {
+  font-size: 1.2em;
+  color: #000;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10em;
+}
+
+.pagenation a {
+  color: #000;
 }
 
 .gallery-information {
@@ -230,61 +417,151 @@ body {
 /* 画面サイズが 768px 以上の時に適用されるスタイル */
 @media screen and (min-width: 768px) {
 
+  .logo {
+  width: 240px;
+  padding-top: 2.5em;
+  /* margin-left: 0.05em; */
+  /* margin-bottom: 0.85em; */
+  padding-left: 1%;
+}
+
+.logo img {
+  width: 240px;
+}
+
+.w-main-wrap {
+  background-color: #fff;
+}
+
+/* pisition:relative   z-index: -1でハンバーガーメニューが隠れるのを防ぐ */
   .main-container {
+    position: relative;
     overflow: hidden;
     margin: 0 auto ;
     width: 95%;
+    background-color:#000;
+    z-index: -1;
+  }
+
+  .w-main-container {
+    overflow: hidden;
+    margin: 0 auto ;
+    padding-top: 2em;
+    width: 95%;
+    background-color:#fff;
   }
   
   .occupation_location {
-    font-size: 1.2em;
-    float: left;
-    width: 10%;
-    background-color: #fff;
-    text-align: left;
-    padding-top: 1.8em;
-  }
-
-  .main-item-container {
-     float: right;
-    width: 85%;
-    height: 100%;
-    text-align: right;
-  }
-
-  .logo {
-    padding-top: 2.5em;
-    margin-left:7em;
-    margin-bottom: 0.85em;
-  }
-
-  .main-item{
-    overflow: hidden;
-    margin: 0 auto ;
-    width: 95%;
-    margin-bottom: 7em;
-  }
-
-  .product-text{
-    font-size: 18px;
+    font-size: 1.4em;
     float: left;
     width: 20%;
     background-color: #fff;
     text-align: left;
+    padding-top: 1.8em;
+    background-color:#000;
   }
 
-  .main-photo{
+  .w-occupation_location {
+    font-size: 1.2em;
+    float: left;
+    width: 25%;
+    color: #000;
+    text-align: left;
+    padding-top: 1.8em;
+    background-color:#fff;
+    /* ここが白い余白の原因 */
+  }
+
+  .main-item-container {
     float: right;
-    width: 65%;
+    width: 80%;
+    height: 100%;
+    margin-bottom: 5em;
+  }
+
+  .w-main-item-container {
+    float: right;
+    width: 70%;
+    height: 100%;
+    text-align: right;
+  }
+
+
+  .main-item{
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto ;
+    width: 100%;
+  }
+
+  .w-main-item {
+    overflow: hidden;
+    margin: 0 auto ;
+    width: 95%;
+    margin-bottom: 2em;
+   
+  }
+
+  .product-text{
+    position: absolute;
+    font-size: 2em;
+    color:#fff;
+    top: 50%;
+    left: 33%;
+    z-index: 5;
+  }
+
+  .w-product-text {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .main-photo {
+    width: 75%;
     height: 100%;
     text-align: right;
     display: block;
-    /* background-color: #fff; */
+    background-color: #000;
   }
+
+  .w-main-photo {
+    text-align: right;
+    display: block;
+    padding-top: 2.8em;
+  }
+
+  .photo {
+   text-align: center;
+  }
+
+  .photo img {
+    width: 80%;
+  }
+
+
+  .pagenation {
+  font-size: 1.2em;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10em;
+  }
+
+  .copyright {
+  margin-bottom: 2em;
+  text-align: right;
+  padding-right: 1.5em;
+}
 
 }
 
+/* FOOTER */
+.footer a {
+  color: #fff;
+}
+
 .title {
+  /* color: #000; */
   margin-bottom: 2em;
 }
 
@@ -311,6 +588,15 @@ body {
 
 .copyright {
   margin-bottom: 2em;
+}
+
+.w-footer {
+  color: #000;
+  background-color: #fff;
+}
+
+.w-footer a {
+  color: #000;
 }
 
 
